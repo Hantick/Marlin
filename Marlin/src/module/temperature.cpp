@@ -991,6 +991,12 @@ inline void loud_kill(FSTR_P const lcd_msg, const heater_id_t heater_id) {
     }
     WRITE(BEEPER_PIN, HIGH);
   #endif
+  #if ENABLED(NOZZLE_PARK_FEATURE)
+    if (!homing_needed_error()) {
+      nozzle.park(0);
+      planner.synchronize();
+    }
+  #endif
   kill(lcd_msg, HEATER_FSTR(heater_id));
 }
 
