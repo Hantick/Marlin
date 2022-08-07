@@ -187,6 +187,21 @@
     #define LCD_PINS_D7                     PB5
     #define ADC_KEYPAD_PIN                  PA1   // Repurpose servo pin for ADC - CONNECTING TO 5V WILL DAMAGE THE BOARD!
 
+   #elif ENABLED(ANET_FULL_GRAPHICS_LCD)
+    
+    #error "CAUTION! ANET_FULL_GRAPHICS_LCD requires wiring modifications. See 'pins_BTT_SKR_MINI_E3_common.h' for details. Comment out this line to continue."
+
+    #define LCD_PINS_RS              PD6
+
+    #define BTN_EN1                  PA10 //Rx1
+    #define BTN_EN2                  PB8
+    #define BTN_ENC                  PA9 //Tx1
+
+    #define LCD_PINS_ENABLE          PB9
+    #define LCD_PINS_D4              PA15
+
+    #define BEEPER_PIN               PB5
+
   #elif EITHER(MKS_MINI_12864, ENDER2_STOCKDISPLAY)
 
     #define BTN_ENC                  EXP1_02_PIN

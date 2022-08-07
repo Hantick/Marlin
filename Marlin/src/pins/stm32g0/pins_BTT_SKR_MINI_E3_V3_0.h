@@ -253,6 +253,21 @@
       #define LCD_PINS_D7            EXP1_01_PIN
       #define ADC_KEYPAD_PIN                PA1   // Repurpose servo pin for ADC - CONNECTING TO 5V WILL DAMAGE THE BOARD!
 
+    #elif ENABLED(ANET_FULL_GRAPHICS_LCD)
+    
+    //#error "CAUTION! ANET_FULL_GRAPHICS_LCD requires wiring modifications. See 'pins_BTT_SKR_MINI_E3_common.h' for details. Comment out this line to continue."
+
+    #define LCD_PINS_RS              PD6
+
+    #define BTN_EN1                  PA10 //Rx1
+    #define BTN_EN2                  PB8
+    #define BTN_ENC                  PA9 //Tx1
+
+    #define LCD_PINS_ENABLE          PB9
+    #define LCD_PINS_D4              PA15
+
+    #define BEEPER_PIN               PB5
+
     #elif EITHER(MKS_MINI_12864, ENDER2_STOCKDISPLAY)
 
       #define BTN_ENC                EXP1_02_PIN
@@ -354,7 +369,7 @@
       #define LCD_BACKLIGHT_PIN             -1
 
     #else
-      #error "Only CR10_STOCKDISPLAY, ZONESTAR_LCD, ENDER2_STOCKDISPLAY, MKS_MINI_12864, FYSETC_MINI_12864_2_1, and TFTGLCD_PANEL_(SPI|I2C) are currently supported on the BIGTREE_SKR_MINI_E3."
+      #error "Only CR10_STOCKDISPLAY, ZONESTAR_LCD, ANET_FULL_GRAPHICS_LCD, ENDER2_STOCKDISPLAY, MKS_MINI_12864, FYSETC_MINI_12864_2_1, and TFTGLCD_PANEL_(SPI|I2C) are currently supported on the BIGTREE_SKR_MINI_E3."
     #endif
 
   #endif // SKR_MINI_SCREEN_ADAPTER
