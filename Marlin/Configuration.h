@@ -1181,7 +1181,7 @@
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
 // ANET A6 Firmware V2.0 defaults (Amax):
-// Amx x: 9000, Amax Y: 5000, Amax z: 50, Amax e: 10000													   
+// Amx x: 9000, Amax Y: 5000, Amax z: 50, Amax e: 10000
 #define DEFAULT_MAX_ACCELERATION      { 8000, 5000, 50, 10000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
@@ -2063,8 +2063,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define MANUAL_X_HOME_POS -20
-#define MANUAL_Y_HOME_POS 2
+#define MANUAL_X_HOME_POS -24
+#define MANUAL_Y_HOME_POS -10
 //#define MANUAL_Z_HOME_POS 0
 //#define MANUAL_I_HOME_POS 0
 //#define MANUAL_J_HOME_POS 0
